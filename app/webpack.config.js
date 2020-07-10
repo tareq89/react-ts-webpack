@@ -18,7 +18,46 @@ module.exports = {
         test: /\.tsx?/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-      }
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localsConvention: 'asIs'
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('node-sass'),
+              // sourceMap: true,
+              sassOptions: {
+                indentWidth: 4,
+                // includePaths: ['./sass/*'],
+                // outputStyle: 'compressed'
+              }
+            }
+          },
+        ]
+      },
+      // {
+      //   test: /\.css$/,
+      //   use: [
+      //     'style-loader',
+      //     'css-loader',
+      //     // {
+      //     //   loader: 'css-loader',
+      //     //   options: {
+      //     //     modules: true,
+      //     //     localsConvention: 'asIs'
+      //     //   }
+      //     // }
+      //   ]
+      // }
     ]
   },
   plugins: [
