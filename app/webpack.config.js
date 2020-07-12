@@ -21,10 +21,9 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.sass$/i,
         use: [
           'style-loader',
-          // 'css-modules-typescript-loader',
           {
             loader: 'css-loader',
             options: {
@@ -43,7 +42,26 @@ module.exports = {
               }
             }
           },
-        ]
+        ],
+        exclude: path.resolve(__dirname, 'src/sass/global/*')
+      },
+      {
+        test: /\.sass$/i,
+        use: [
+          'style-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('node-sass'),
+              sourceMap: true,
+              sassOptions: {
+                indentWidth: 4,
+                outputStyle: 'compressed'
+              }
+            }
+          },
+        ],
+        include: path.resolve(__dirname, 'src/sass/global/*')
       }
     ]
   },
