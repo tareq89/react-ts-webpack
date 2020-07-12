@@ -9,8 +9,6 @@ function App(): JSX.Element {
   const [data, setdata] = useState(null)
   let loading = useRef(true)
   useEffect(() => {
-    console.log(styles)
-    console.log(style2)
     callApi()
       .then(response => {
         loading.current = false

@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const { SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS } = require('constants');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   target: 'web',
@@ -52,7 +52,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './index.html'
-    })
+    }),
+    new Dotenv()
   ],
   resolve: {
     alias: {

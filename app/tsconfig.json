@@ -3,6 +3,7 @@
     "jsx": "preserve",
     "esModuleInterop": true,
     "moduleResolution": "node",
+    "sourceMap": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]
