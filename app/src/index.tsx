@@ -1,16 +1,16 @@
 import React, { useEffect, useState, useRef,  } from 'react'
 import { render } from 'react-dom'
 import { callApi } from '@packages/api'
-import * as styles from '../sass/index.sass'
-// import '../sass/index.sass'
-// import '../sass/index.css'
+import styles from '~/sass/App.sass'
+import style2 from '~/sass/nested/div.sass'
+import sum from '~/utils/sum'
 
 function App(): JSX.Element {
   const [data, setdata] = useState(null)
   let loading = useRef(true)
   useEffect(() => {
     console.log(styles)
-    // console.log(styleCss)
+    console.log(style2)
     callApi()
       .then(response => {
         loading.current = false
@@ -24,9 +24,10 @@ function App(): JSX.Element {
   } else if (data) {
     content = (
       <div className={styles.AppBody}>
-        <div>You are from {data.name}</div>
+        <div className={style2.Name}>You are from {data.name}</div>
         <div>Country code {data.country}</div>
         <div>ip {data.ip}</div>
+        <div> 1 + 2 ={'>'} {sum(1, 2)}</div>
       </div>
     )
   } else {

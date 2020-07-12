@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS } = require('constants');
 
 module.exports = {
   target: 'web',
@@ -23,6 +24,7 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           'style-loader',
+          // 'css-modules-typescript-loader',
           {
             loader: 'css-loader',
             options: {
@@ -34,41 +36,28 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               implementation: require('node-sass'),
-              // sourceMap: true,
+              sourceMap: true,
               sassOptions: {
                 indentWidth: 4,
-                // includePaths: ['./sass/*'],
-                // outputStyle: 'compressed'
+                outputStyle: 'compressed'
               }
             }
           },
         ]
-      },
-      // {
-      //   test: /\.css$/,
-      //   use: [
-      //     'style-loader',
-      //     'css-loader',
-      //     // {
-      //     //   loader: 'css-loader',
-      //     //   options: {
-      //     //     modules: true,
-      //     //     localsConvention: 'asIs'
-      //     //   }
-      //     // }
-      //   ]
-      // }
+      }
     ]
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './index.html',
-      excludeChunks: [ 'bundle' ]
+      template: './index.html'
     })
   ],
   resolve: {
+    alias: {
+      '~': path.resolve(__dirname, 'src')
+    },
     extensions: ['.ts', '.tsx', '.js']
   },
   devServer: {
