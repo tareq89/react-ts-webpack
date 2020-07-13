@@ -8,6 +8,15 @@
     "start": "webpack-dev-server",
     "build": "webpack"
   },
+  "prettier": {
+    "printWidth": 80,
+    "singleQuote": false,
+    "useTabs": false,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "semi": false,
+    "editor.formatOnSave": true
+  },
   "dependencies": {
     "@packages/api": "^1.0.0"
   },

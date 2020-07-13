@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useRef } from 'react'
-import { render } from 'react-dom'
-import { callApi } from '@packages/api'
-import styles from '~/sass/App.scss'
-import style2 from '~/sass/nested/div.scss'
-import sum from '~/utils/sum'
+import React, { useEffect, useState, useRef } from "react"
+import { render } from "react-dom"
+import { callApi } from "@packages/api"
+import styles from "~/sass/App.scss"
+import style2 from "~/sass/nested/div.scss"
+import sum from "~/utils/sum"
 
 function App(): JSX.Element {
   const [data, setdata] = useState(null)
@@ -25,8 +25,8 @@ function App(): JSX.Element {
         <div>Country code {data.country}</div>
         <div>ip {data.ip}</div>
         <div>
-          {' '}
-          1 + 2 ={'>'} {sum(1, 2)}
+          {" "}
+          1 + 2 ={">"} {sum(1, 2)}
         </div>
       </div>
     )
@@ -36,5 +36,5 @@ function App(): JSX.Element {
   return content
 }
 
-const root = document.getElementById('App')
+const root = document.getElementById("App")
 render(<App />, root)
