@@ -6,6 +6,7 @@ import style2 from "~/sass/nested/div.scss"
 import sum from "~/utils/sum"
 
 function App(): JSX.Element {
+  let mango
   const [data, setdata] = useState(null)
   let loading = useRef(true)
   useEffect(() => {
