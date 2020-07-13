@@ -34,6 +34,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
+              additionalData: "@import './src/sass/global'", // it can be a function to load sass data from environment
               implementation: require('node-sass'),
               sourceMap: true,
               sassOptions: {
@@ -44,24 +45,6 @@ module.exports = {
           },
         ],
         exclude: path.resolve(__dirname, 'src/sass/global/*')
-      },
-      {
-        test: /\.sass$/i,
-        use: [
-          'style-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              implementation: require('node-sass'),
-              sourceMap: true,
-              sassOptions: {
-                indentWidth: 4,
-                outputStyle: 'compressed'
-              }
-            }
-          },
-        ],
-        include: path.resolve(__dirname, 'src/sass/global/*')
       }
     ]
   },

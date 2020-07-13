@@ -4,7 +4,6 @@ import { callApi } from '@packages/api'
 import styles from '~/sass/App.sass'
 import style2 from '~/sass/nested/div.sass'
 import sum from '~/utils/sum'
-import '~/sass/global/global.sass'
 
 function App(): JSX.Element {
   const [data, setdata] = useState(null)
