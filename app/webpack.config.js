@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
   target: 'web',
@@ -21,7 +21,7 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /\.sass$/i,
+        test: /\.scss$/i,
         use: [
           'style-loader',
           {
@@ -34,15 +34,15 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              additionalData: "@import './src/sass/global'", // it can be a function to load sass data from environment
+              additionalData: "@import './src/sass/global';", // it can be a function to load sass data from environment
               implementation: require('node-sass'),
               sourceMap: true,
               sassOptions: {
-                indentWidth: 4,
+                indentWidth: 2,
                 outputStyle: 'compressed'
               }
             }
-          },
+          }
         ],
         exclude: path.resolve(__dirname, 'src/sass/global/*')
       }
