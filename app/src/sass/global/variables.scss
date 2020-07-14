@@ -12,8 +12,8 @@ $red: #ee395f !default;
 $green: #41b468 !default;
 $cyan: #74cdda !default;
 
-$primaryThemerColor: red;
+$primaryThemerColor: $red;
 
 $family-sans-serif: "Rubik";
-$family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$family-serif: "Georgia", "Cambria", "Times New Roman", "Times", "serif";
 $family-base: $family-sans-serif !default;
