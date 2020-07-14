@@ -2,6 +2,7 @@ const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const { HotModuleReplacementPlugin } = require("webpack")
+const StylelintPlugin = require("stylelint-webpack-plugin")
 const Dotenv = require("dotenv-webpack")
 
 module.exports = {
@@ -43,7 +44,7 @@ module.exports = {
         }
       },
       {
-        test: /\.tsx?/,
+        test: /\.(ts|tsx)?/,
         exclude: /node_modules/,
         loader: "babel-loader"
       },
@@ -82,7 +83,8 @@ module.exports = {
       template: "./index.html"
     }),
     new Dotenv(),
-    new HotModuleReplacementPlugin()
+    new HotModuleReplacementPlugin(),
+    new StylelintPlugin()
   ],
   resolve: {
     alias: {
