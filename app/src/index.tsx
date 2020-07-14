@@ -7,7 +7,8 @@ import sum from "~/utils/sum"
 
 function App(): JSX.Element {
   const [data, setdata] = useState(null)
-  const loading = useRef(true)
+  let loading = useRef(true)
+
   useEffect(() => {
     callApi().then((response) => {
       loading.current = false
