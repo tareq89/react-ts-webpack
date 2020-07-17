@@ -1,11 +1,12 @@
 {
-  "private": true,
-  "workspaces": [
-    "app",
-    "packages/*"
-  ],
-  "devDependencies": {
-    "lerna": "^3.22.1"
-  },
-  "name": "typescript-webpack"
+	"private": true,
+	"workspaces": [
+		"app",
+		"cra-app",
+		"packages/*"
+	],
+	"devDependencies": {
+		"lerna": "^3.22.1"
+	},
+	"name": "typescript-webpack"
 }
