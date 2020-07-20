@@ -14,7 +14,9 @@
     "@types/react-redux": "^7.1.9",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
     "react-scripts": "3.4.1",
+    "redux-thunk": "^2.3.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
@@ -72,6 +74,7 @@
     "eslint-plugin-react-hooks": "^4.0.8",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
+    "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.2",
