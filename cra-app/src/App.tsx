@@ -8,8 +8,6 @@ import { Provider } from 'react-redux'
 import { store } from './store'
 
 function AppContent() {
-  console.log(styles, style2)
-
   const [data, setdata] = useState({ name: null, country: null, ip: null })
   const loading = useRef(true)
 
@@ -31,8 +29,7 @@ function AppContent() {
         <div>Country code {data.country}</div>
         <div>ip {data.ip}</div>
         <div>
-          {' '}
-          1 + 2 ={'>'} {sum(1, 2)}
+          {' this is some '}1 + 2 ={'>'} {sum(1, 2)}
         </div>
       </div>
     )

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@packages/api": "^1.0.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -22,7 +23,7 @@
     "test": "craco test",
     "eject": "craco eject",
     "lint:sass": "stylelint './src/sass/**/*.scss'",
-    "lint:ts": "eslint --fix './src/**/*.{ts,tsx}'"
+    "lint:ts": "eslint --fix --max-warnings 0 './src/**/*.{ts,tsx}'"
   },
   "prettier": {
     "printWidth": 80,
@@ -30,8 +31,7 @@
     "useTabs": false,
     "tabWidth": 2,
     "trailingComma": "none",
-    "semi": false,
-    "editor.formatOnSave": true
+    "semi": false
   },
   "lint-staged": {
     "src/**/*.{ts,tsx,scss}": [
@@ -42,8 +42,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint-staged",
-      "pre-push": "yarn lint-staged"
+      "pre-commit": "yarn lint-staged --verbose",
+      "pre-push": "yarn lint-staged --verbose"
     }
   },
   "eslintConfig": {
@@ -71,6 +71,12 @@
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.11"
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-webpack-plugin": "^2.1.0"
   }
 }
