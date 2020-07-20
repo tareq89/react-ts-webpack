@@ -2,9 +2,12 @@
 	"private": true,
 	"workspaces": [
 		"app",
-		"cra-app",
 		"packages/*"
 	],
+	"scripts": {
+		"i": "yarn workspaces run i",
+		"lint": "lerna run lint"
+	},
 	"devDependencies": {
 		"lerna": "^3.22.1"
 	},

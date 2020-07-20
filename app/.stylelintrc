@@ -5,6 +5,8 @@
     "stylelint-config-prettier"
   ],
   "rules": {
-    "selector-class-pattern": "[A-Z-a-z-0-9]"
+    "selector-class-pattern": "[A-Z-a-z-0-9]",
+    "function-url-quotes": "never",
+    "scss/dollar-variable-pattern" : ".*"
   }
 }

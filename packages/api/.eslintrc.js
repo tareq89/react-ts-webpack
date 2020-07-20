@@ -1,16 +1,14 @@
 module.exports = {
   extends: [
-    "plugin:react-hooks/recommended",
     "plugin:import/typescript",
-    "eslint-config-react-app",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
     "prettier/@typescript-eslint",
+    "plugin:prettier/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript"
   ],
-  plugins: ["react", "@typescript-eslint", "import"],
+  plugins: ["@typescript-eslint", "import"],
   env: {
     es6: true,
     browser: true,
@@ -23,7 +21,7 @@ module.exports = {
       "error",
       {
         printWidth: 80,
-        singleQuote: true,
+        singleQuote: false,
         useTabs: false,
         tabWidth: 2,
         trailingComma: "none",

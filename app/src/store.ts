@@ -10,7 +10,7 @@ const reducers = combineReducers({
   profile: profileReducer
 })
 
-const storeEnhancers = compose(
+const storeEnhancers: any = compose(
   applyMiddleware(thunk),
   // redux dev tools
   typeof (window as WindowWithReduxDevTools).__REDUX_DEVTOOLS_EXTENSION__ !==
