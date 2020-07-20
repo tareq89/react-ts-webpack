@@ -45,24 +45,7 @@ module.exports = {
     "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/prefer-interface": "off",
     "@typescript-eslint/array-type": "off",
-    "@typescript-eslint/no-object-literal-type-assertion": "off",
-    "react/no-unescaped-entities": "off",
-    "react/destructuring-assignment": "off",
-    "react/jsx-filename-extension": [
-      1,
-      {
-        extensions: [".tsx"]
-      }
-    ],
-    "react/boolean-prop-naming": "off",
-    "react/sort-comp": "off",
-    "react/sort-prop-types": "off"
-  },
-  settings: {
-    react: {
-      pragma: "React",
-      version: "detect"
-    }
+    "@typescript-eslint/no-object-literal-type-assertion": "off"
   },
   globals: {},
   parser: "@typescript-eslint/parser",

@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from "react"
-import { callApi } from "@packages/api"
 import styles from "~/sass/App.scss"
 import style2 from "~/sass/nested/div.scss"
 import sum from "~/utils/sum"
 import { Provider } from "react-redux"
-import { store } from "./store"
+import { store } from "~/store"
+import { callApi } from "@packages/api"
 
 function AppContent() {
   const [data, setdata] = useState({ name: null, country: null, ip: null })
