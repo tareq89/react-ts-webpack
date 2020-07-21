@@ -1,12 +1,12 @@
-import React, { useEffect, useState, useRef } from "react"
+import React, { useEffect, useState, useRef } from 'react'
 
-import { callApi } from "@packages/api"
-import styles from "~/sass/App.module.scss"
-import style2 from "~/sass/nested/div.module.scss"
-import sum from "~/utils/sum"
-import { Provider } from "react-redux"
-import { store } from "./store"
-import ActionButton from "@packages/components/lib/Buttons/ActionButton"
+import { callApi } from '@packages/api'
+import styles from '~/sass/App.module.scss'
+import style2 from '~/sass/nested/div.module.scss'
+import sum from '~/utils/sum'
+import { Provider } from 'react-redux'
+import { store } from './store'
+import ActionButton from '@packages/components/lib/Buttons/ActionButton'
 
 function AppContent() {
   const [data, setdata] = useState({ name: null, country: null, ip: null })
@@ -30,9 +30,9 @@ function AppContent() {
         <div>Country code {data.country}</div>
         <div>ip {data.ip}</div>
         <div>
-          {" this is some "}1 + 2 ={">"} {sum(1, 2)}
+          {' this is some '}1 + 2 ={'>'} {sum(1, 2)}
         </div>
-        <ActionButton title="Hello" />
+        <ActionButton title="hellow" />
       </div>
     )
   } else {

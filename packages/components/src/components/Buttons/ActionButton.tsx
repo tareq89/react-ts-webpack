@@ -1,5 +1,10 @@
-import React from "react";
+import React from 'react'
 
-export default function ActionButton(props: any) {
-	return <button>{props.title}</button>;
+interface ButtonProps {
+  title: string
 }
+const ActionButton: React.FC<ButtonProps> = ({ title }) => {
+  return <button>{title}</button>
+}
+
+export default ActionButton
