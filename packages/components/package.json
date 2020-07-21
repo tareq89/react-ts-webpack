@@ -2,6 +2,7 @@
 	"name": "@packages/components",
 	"version": "1.0.0",
 	"private": true,
+	"main": "lib",
 	"dependencies": {
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.3.2",
@@ -12,18 +13,18 @@
 		"@types/react-dom": "^16.9.0",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
-		"react-scripts": "3.4.1",
-		"typescript": "~3.7.2"
+		"react-scripts": "3.4.1"
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"build:react": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"build:ts": "yarn clean && tsc",
-		"clean": "rimraf lib",
+		"build": "yarn clean:dist && tsc",
 		"styleguide": "styleguidist server",
-		"styleguide:build": "styleguidist build"
+		"styleguide:build": "styleguidist build",
+		"clean:dist": "rimraf lib",
+		"clean:node_modules": "rimraf node_modules"
 	},
 	"eslintConfig": {
 		"extends": "react-app"

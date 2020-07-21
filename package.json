@@ -1,11 +1,17 @@
 {
 	"private": true,
 	"workspaces": [
-		"cra-app",
-		"packages/*"
+		"packages/*",
+		"cra-app"
 	],
 	"devDependencies": {
-		"lerna": "^3.22.1"
+		"rimraf": "^3.0.2"
+	},
+	"scripts": {
+		"i": "yarn install --pure-lockfile",
+		"clean:dist": "yarn workspaces run clean:dist",
+		"clean:node_modules": "yarn workspaces run clean:node_modules",
+		"build": "yarn workspaces run build"
 	},
 	"name": "typescript-webpack"
 }
