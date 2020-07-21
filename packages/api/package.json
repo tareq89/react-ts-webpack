@@ -25,12 +25,6 @@
       "yarn lint:ts"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint-staged --verbose",
-      "pre-push": "yarn lint-staged --verbose"
-    }
-  },
   "dependencies": {
     "axios": "^0.19.2"
   },
@@ -40,7 +34,6 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
