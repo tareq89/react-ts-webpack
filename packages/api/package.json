@@ -7,7 +7,8 @@
     "build": "yarn clean:dist && tsc",
     "clean:dist": "rimraf lib",
     "clean:node_modules": "rimraf node_modules",
-    "lint:ts": "eslint --fix --max-warnings 0 './src/**/*.{ts,tsx}'"
+    "lint:ts": "eslint --fix --max-warnings 0 './src/**/*.{ts,tsx}'",
+    "lint": "yarn lint-staged --verbose"
   },
   "prettier": {
     "printWidth": 80,

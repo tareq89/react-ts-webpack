@@ -30,7 +30,8 @@
     "lint:sass": "stylelint './src/sass/**/*.scss'",
     "lint:ts": "eslint --fix --max-warnings 0 './src/**/*.{ts,tsx}'",
     "clean:dist": "rimraf dist",
-    "clean:node_modules": "rimraf node_modules"
+    "clean:node_modules": "rimraf node_modules",
+    "lint": "yarn lint-staged --verbose"
   },
   "prettier": {
     "printWidth": 80,
