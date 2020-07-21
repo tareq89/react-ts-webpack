@@ -2,6 +2,9 @@ import React from 'react'
 import { render } from 'react-dom'
 import { App } from './App'
 import * as Sentry from '@sentry/browser'
+import { createStore } from '~/store'
+
+const { store } = createStore()
 
 if (
   process.env.NODE_ENV === 'production' &&
@@ -14,4 +17,4 @@ if (
 }
 
 const root = document.getElementById('root')
-render(<App />, root)
+render(<App store={store} />, root)
