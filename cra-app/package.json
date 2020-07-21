@@ -28,7 +28,9 @@
     "eject": "craco eject",
     "release": "(export REACT_APP_SENTRY_RELEASE=$(git rev-parse --short HEAD); react-scripts build && node scripts/sentry.js)",
     "lint:sass": "stylelint './src/sass/**/*.scss'",
-    "lint:ts": "eslint --fix --max-warnings 0 './src/**/*.{ts,tsx}'"
+    "lint:ts": "eslint --fix --max-warnings 0 './src/**/*.{ts,tsx}'",
+    "clean:dist": "rimraf dist",
+    "clean:node_modules": "rimraf node_modules"
   },
   "prettier": {
     "printWidth": 80,
@@ -80,6 +82,7 @@
     "lint-staged": "^10.2.11",
     "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-sass-guidelines": "^7.0.0",

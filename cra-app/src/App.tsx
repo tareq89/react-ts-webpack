@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react"
 
-import { callApi } from "@packages/api/lib/index"
+import { callApi } from "@packages/api"
 import styles from "~/sass/App.module.scss"
 import style2 from "~/sass/nested/div.module.scss"
 import sum from "~/utils/sum"
