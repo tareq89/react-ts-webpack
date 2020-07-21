@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from "react"
 
-import { callApi } from "@packages/api"
+import { callApi } from "@packages/api/lib/index"
 import styles from "~/sass/App.module.scss"
 import style2 from "~/sass/nested/div.module.scss"
 import sum from "~/utils/sum"
 import { Provider } from "react-redux"
 import { store } from "./store"
-import ActionButton from "@packages/components/src/components/Buttons/ActionButton"
+import ActionButton from "@packages/components/lib/Buttons/ActionButton"
 
 function AppContent() {
   const [data, setdata] = useState({ name: null, country: null, ip: null })

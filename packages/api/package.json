@@ -1,12 +1,17 @@
 {
 	"name": "@packages/api",
 	"version": "1.0.0",
-	"main": "src/index.ts",
+	"main": "lib",
 	"license": "MIT",
 	"scripts": {
-		"build": "webpack"
+		"clean": "rimraf lib",
+		"build": "yarn clean && tsc"
 	},
 	"dependencies": {
 		"axios": "^0.19.2"
+	},
+	"devDependencies": {
+		"rimraf": "^3.0.2",
+		"typescript": "^3.9.7"
 	}
 }
