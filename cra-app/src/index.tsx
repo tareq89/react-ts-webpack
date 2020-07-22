@@ -1,20 +1,17 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { App } from './App'
-import * as Sentry from '@sentry/browser'
-import { createStore } from '~/store'
+import React from "react"
+import { render } from "react-dom"
+import { App } from "./App"
+import * as Sentry from "@sentry/react"
+import { createStore } from "~/store"
 
 const { store } = createStore()
 
-if (
-  process.env.NODE_ENV === 'production' &&
-  process.env.REACT_APP_SENTRY_RELEASE
-) {
+if (process.env.REACT_APP_SENTRY_RELEASE && process.env.REACT_APP_SENTRY_DSN) {
   Sentry.init({
-    dsn: process.env.REACT_APP_SENTRY_DSN,
-    release: process.env.REACT_APP_SENTRY_RELEASE
+    release: process.env.REACT_APP_SENTRY_RELEASE,
+    dsn: process.env.REACT_APP_SENTRY_DSN
   })
 }
 
-const root = document.getElementById('root')
+const root = document.getElementById("root")
 render(<App store={store} />, root)
