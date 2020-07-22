@@ -5,7 +5,7 @@
   "dependencies": {
     "@packages/api": "^1.0.0",
     "@packages/components": "^1.0.0",
-    "@sentry/browser": "^5.19.2",
+    "@sentry/react": "^5.20.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -26,7 +26,6 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
-    "release": "(export REACT_APP_SENTRY_RELEASE=$(git rev-parse --short HEAD); react-scripts build && node scripts/sentry.js)",
     "lint:sass": "stylelint './src/sass/**/*.scss'",
     "lint:ts": "eslint --fix --max-warnings 0 './src/**/*.{ts,tsx}'",
     "clean:dist": "rimraf dist",
