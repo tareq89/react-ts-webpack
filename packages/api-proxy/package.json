@@ -1,5 +1,5 @@
 {
-  "name": "@packages/api",
+  "name": "@packages/api-proxy",
   "version": "1.0.0",
   "main": "lib",
   "license": "MIT",

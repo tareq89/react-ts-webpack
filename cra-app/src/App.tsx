@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
-
-import { callApi } from '@packages/api'
+import { getCountries } from '@packages/api-proxy/lib/test/getCountries'
 import styles from '~/sass/App.module.scss'
 import style2 from '~/sass/nested/div.module.scss'
 import sum from '~/utils/sum'
@@ -13,7 +12,7 @@ function AppContent() {
   const loading = useRef(true)
 
   useEffect(() => {
-    callApi().then((response: any) => {
+    getCountries().then((response: any) => {
       loading.current = false
       setdata(response)
     })
